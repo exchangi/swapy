@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy.csproj": {}
+    "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\swapy.csproj": {}
   },
   "projects": {
-    "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy.csproj": {
+    "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\swapy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy.csproj",
+        "projectUniqueName": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\swapy.csproj",
         "projectName": "swapy",
-        "projectPath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy.csproj",
+        "projectPath": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\swapy.csproj",
         "packagesPath": "C:\\Users\\DHIA\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\obj\\",
+        "outputPath": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DHIA\\AppData\\Roaming\\NuGet\\NuGet.Config"
