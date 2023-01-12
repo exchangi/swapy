@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16315,6 +16320,11 @@
     {
       "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\Register.cshtml",
+      "TargetPath": "Views\\Home\\Register.cshtml",
       "FileKind": "mvc"
     },
     {

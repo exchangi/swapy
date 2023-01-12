@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Net;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using swapy.Models;
 using Microsoft.AspNetCore.Http; //session4
@@ -26,6 +27,19 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [HttpGet("/login")]
+      public IActionResult Login()
+    {
+        return View();
+    }
+    [HttpGet("/register")]
+      public IActionResult Register()
+    {
+        return View();
+    }
+    
+   
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
