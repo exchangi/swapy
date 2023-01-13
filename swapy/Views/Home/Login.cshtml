@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <link rel="stylesheet" href="~/css/Login.css">  <link rel="stylesheet" href="~/css/Login.css">
-</head>
-<body>
-    
-</body>
-</html>
+@model UserLogin
+@section Register {
+    <link href="@Url.Content("~/css/Login.css")" rel="stylesheet" type="text/css" />
+
 <div class="container">
   <div class="content">
     <div class="banner"> <br>
@@ -15,15 +10,17 @@
       <br>
      
     </div>
-    <form action="">
+    <form  asp-action="UserLogin" asp-controller="Home" >
     <div class="form">
       <img src="/img/bg-img/swapy.png" alt="profile" style="border: solid 1px;">
       <p>Need an Account? <a href="/register"> Sign Up</a></p>
-      <input type="email" autocomplete placeholder="Email">
-      <input type="password" placeholder="Password">
+      <input asp-for="LoginEmail"  placeholder="Email">
+      <input asp-for="LoginPassword"  placeholder="Password">
       <button type="submit">Sign In</button>
       <a href="" id="r">Forgot Your Password?</a>
     </div>
     </form>
   </div>
 </div>
+
+}

@@ -12,10 +12,10 @@ public class HomeController : Controller
     private MyContext _context; //additional
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, MyContext context)
     {
         _logger = logger;
-        // _context = context;
+        _context = context;
     }
 
     public IActionResult Index()
@@ -23,10 +23,21 @@ public class HomeController : Controller
         return View();
     }
 
+    
+    // public IActionResult Profile()
+    // {
+    //     if(HttpContext.Session.GetInt32("userId") == null) {
+    //         return redirectToAction("Login");
+    //     }
+    //     return View();
+    // }
+
     public IActionResult Privacy()
     {
         return View();
     }
+
+    // ------------------USER CONTROLLER------------------
 
     [HttpGet("/login")]
       public IActionResult Login()
@@ -38,7 +49,51 @@ public class HomeController : Controller
     {
         return View();
     }
-    
+    // ----------------REGISTER-----------------
+    //  [HttpPost("/user/create")]
+    public IActionResult CreateUser (User NewUser)
+    {
+        if(ModelState.IsValid)
+        {
+            if(_context.Users.Any(u =>u.Email == NewUser.Email))
+            {
+                ModelState.AddModelError("Email" ,"Email Already exist !!");
+            }
+            PasswordHasher<User> Hasher = new PasswordHasher<User>();
+            NewUser.Password = Hasher.HashPassword(NewUser, NewUser.Password);
+            _context.Add(NewUser);
+            _context.SaveChanges();
+            HttpContext.Session.SetInt32("userId" ,NewUser.UserId);
+            return RedirectToAction ("Index");
+        } else {
+            return View("Register");
+        }
+    }
+    // -----------------LOGIN USER-------------------
+       
+    public IActionResult UserLogin (UserLogin UserSubmission)
+    {
+        if(ModelState.IsValid)
+        {
+            User? UserFromDB =_context.Users.FirstOrDefault(u => u.Email ==UserSubmission.LoginEmail);
+            if(UserFromDB == null)
+            {
+                ModelState.AddModelError("LoginEmail", "Invalid Email/Password");
+                return View("Login");
+            }
+            var hasher = new PasswordHasher<UserLogin>();
+            var result = hasher.VerifyHashedPassword(UserSubmission, UserFromDB.Password, UserSubmission.LoginPassword);
+            if (result==0)
+            {
+                ModelState.AddModelError("LoginPassword", "Invalid Email/password");
+                return View("Login");
+            }
+            HttpContext.Session.SetInt32("userId", UserFromDB.UserId);
+            return RedirectToAction("Index");
+        }
+        return View("Login");
+    }
+
    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

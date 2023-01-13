@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <link rel="stylesheet" href="~/css/Login.css">  <link rel="stylesheet" href="~/css/Login.css">
-</head>
-<body>
+
+@model User
+
+      @* <link rel="stylesheet" href="~/css/Login.css">  <link rel="stylesheet" href="~/css/Login.css"> *@
     
-</body>
-</html>
+
+@section Register {
+    <link href="@Url.Content("~/css/Login.css")" rel="stylesheet" type="text/css" />
+
+
 <div class="container">
   <div class="content">
     <div class="banner"> <br>
@@ -15,18 +16,20 @@
       <br>
      
     </div>
-    <form action="">
+    <form  asp-action="CreateUser" asp-controller="Home">
     <div class="form">
       <img src="/img/bg-img/swapy.png" alt="profile" style="border: solid 1px;">
       <p>Already have an Account? <a href="/login"> Sign In</a></p>
-      <input type="text" autocomplete placeholder="First Name">
-      <input type="text" autocomplete placeholder="Last Name">
-      <input type="email" autocomplete placeholder="Email">
-      <input type="password" placeholder="Password">
-      <input type="password" placeholder="Confirm Password">
+      <input asp-for="FirstName" placeholder="First Name">
+      <span asp-validation-for="FirstName" class="text-danger"></span>
+      <input asp-for="LastName" placeholder="Last Name">
+      <input asp-for="Email" placeholder="Email">
+      <input asp-for="Password" placeholder="Password">
+      <input asp-for="ConfirmPassword" placeholder="Confirm Password">
       <button type="submit" style="margin-bottom: 10px;">Sign Up</button>
      
     </div>
     </form>
   </div>
 </div>
+}

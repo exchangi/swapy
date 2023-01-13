@@ -25,11 +25,10 @@ public class User
     [Compare(otherProperty:"Password")]
     [MinLength(length: 8, ErrorMessage ="Confirm Password must be identical to the password and at least 8 character ❗")]
     public string ConfirmPassword {get; set;} 
-    [Required]
-    public string Image {get; set;}
-    [Required]
-    [MinLength(length: 8, ErrorMessage ="Phone number should be valid 🤷🏻‍♂️🤷🏻‍♀️")]
-    public int Phone {get; set;} 
+    
+    public string Image {get; set;} = "";
+    
+    public string Phone {get; set;}  = "";
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
