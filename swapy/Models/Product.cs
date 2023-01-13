@@ -7,6 +7,8 @@ public class Product
     [Key]
     public int ProductId { get; set; } 
     [Required]
+     public string Image {get; set;} 
+    [Required]
     [MinLength(2, ErrorMessage="¨Product Name must be 3 characters or longer!")]
     public string Name { get; set; }
     [Required]
