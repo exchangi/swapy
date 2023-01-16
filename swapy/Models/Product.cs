@@ -23,12 +23,13 @@ public class Product
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
     public User? User {get;set;}
-    public List<Association> ProductCategories {get;set;} = new List<Association>();
+    // public List<Association> ProductCategories {get;set;} = new List<Association>(); // 
+    // public List<Category> ProductCategories {get; set;} = new List<Category>();
+    public int CategoryId {get; set;}
+    public Category? Category {get; set;}
     public List<Order> ProductOrdered {get;set;} = new List<Order>();
     [InverseProperty("swap")]
     public List<Swap> Swapper { get; set; } = new List<Swap>();
     [InverseProperty("Own")]
     public List<Swap> Owner { get; set; } = new List<Swap>();
-
 }
-

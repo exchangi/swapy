@@ -1,0 +1,59 @@
+@model Product
+@section form {
+    <link href="@Url.Content("~/css/AddProduct.css")" rel="stylesheet" type="text/css" />
+<body>
+  <div class="container">
+    <header class="header">ADD your product </h1>
+      <p id="description" class="description">¡ allways for you !</p>
+    </header>
+    <form asp-action="AddNewProduct" asp-controller="Home" >
+      <div class="form-group">
+        <span asp-validation-for="Image" class="text-danger"></span>
+        <label id="Image-label" asp-for="Image">Image</label>
+        <input asp-for="Image" class="form-control" placeholder="Image"  />
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <label id="Name-label" asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Name" />
+      </div>
+<div class="form-group">
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+        <label id="Quantity-label" asp-for="Quantity">Quantity<span class="clue">(opcional)</span></label>
+        <input asp-for="Quantity" class="form-control" placeholder="Quantity" />
+      </div>
+        <div class="form-group">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        <label id="Price-label" asp-for="Price">Price<span class="clue">(opcional)</span></label>
+        <input  asp-for="Price" class="form-control" placeholder="Price" />
+      </div>
+      <div class="form-group">
+        <p>category</p>
+        @* <select name="" id=""> *@
+            @foreach (Category c in ViewBag.ALLcategories)
+            {
+                @* <option value="@c.CategoryId">c.Name</option> *@
+                <label>
+          <input asp-for="CategoryId" value="@c.CategoryId" type="radio" class="input-radio" checked />
+          @c.Name
+          </label>
+            }
+        @* </select> *@
+        @* <label>
+          <input name="clothes" value="definitely" type="radio" class="input-radio" checked />
+          clothes
+          </label> *@
+         
+      </div>
+<div class="form-group">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <p>Description</p>
+        <textarea asp-for="Description" class="input-textarea" name="Description" placeholder="Description"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Add your product </button>
+      </div>
+    </form>
+  </div>
+</body>
+}

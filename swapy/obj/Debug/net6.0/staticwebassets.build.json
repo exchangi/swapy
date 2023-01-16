@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d+u9/Fy9rzJK4EhPsiGGZXJCUkJJ53GkfolvoeugaXU=",
+  "Hash": "ldbSkySxD46kv8d5de3AMXZOjXIXos7NXACVjWrA11E=",
   "Source": "swapy",
   "BasePath": "_content/swapy",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\swapy.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\css\\AddProduct.css",
+      "SourceId": "swapy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\",
+      "BasePath": "_content/swapy",
+      "RelativePath": "css/AddProduct.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AddProduct.css"
     },
     {
       "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\css\\animate.css",

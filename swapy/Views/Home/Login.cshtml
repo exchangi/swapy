@@ -14,7 +14,9 @@
     <div class="form">
       <img src="/img/bg-img/swapy.png" alt="profile" style="border: solid 1px;">
       <p>Need an Account? <a href="/register"> Sign Up</a></p>
+      <span asp-validation-for="LoginEmail" style="color: blue;"></span> <br>
       <input asp-for="LoginEmail"  placeholder="Email">
+      <span asp-validation-for="LoginPassword"  style="color: blue;"></span><br>
       <input asp-for="LoginPassword"  placeholder="Password">
       <button type="submit">Sign In</button>
       <a href="" id="r">Forgot Your Password?</a>

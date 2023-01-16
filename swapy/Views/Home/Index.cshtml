@@ -85,7 +85,15 @@
                 <a href="#" id="essenceCartBtn"><img src="/img/core-img/bag.svg" alt=""> Card<span>3</span></a>
             </div>
             <div class="favourite-area">
-                <a href="/login"><img src="/img/core-img/log1.jpg" alt=""> login</a>
+                @if (Context.Session.GetInt32("userId") == null)
+                        {
+                            <a href="/login"><img src="/img/core-img/log1.jpg"> login</a>
+
+                        }
+                        else
+                        {
+                            <a href="/logout"><img src="/img/core-img/log1.jpg"> Lougout</a>
+                        }
             </div>
         </div>
     </div>

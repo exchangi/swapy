@@ -16298,6 +16298,11 @@
   "RootNamespace": "swapy",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\AddProduct.cshtml",
+      "TargetPath": "Views\\Home\\AddProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

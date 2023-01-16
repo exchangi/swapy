@@ -105,6 +105,34 @@ public class HomeController : Controller
         }
         return View("Login");
     }
+// LogOut 
+    [HttpGet("/logout")]
+    public IActionResult Logout ()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
+    }
+
+// --------------add product-----------
+    [HttpGet("/add")]
+    public IActionResult AddProduct()
+    {
+        ViewBag.ALLcategories = _context.Categories.ToList();
+        return View();
+    }
+    public IActionResult AddNewProduct(Product newProduct)
+    {
+        if(ModelState.IsValid)
+        {
+            newProduct.UserId = (int)HttpContext.Session.GetInt32("userId");
+            _context.Add(newProduct);
+            _context.SaveChanges();
+            ViewBag.AllProducts =_context.Products.ToList();
+            return RedirectToAction("Profile");
+        }
+        ViewBag.AllProducts = _context.Products.ToList();
+        return View("Index");
+    }
 
    
 

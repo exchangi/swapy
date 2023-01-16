@@ -20,14 +20,17 @@
     <div class="form">
       <img src="/img/bg-img/swapy.png" alt="profile" style="border: solid 1px;">
       <p>Already have an Account? <a href="/login"> Sign In</a></p>
+      <span asp-validation-for="FirstName" style="color: blue;"></span>
       <input asp-for="FirstName" placeholder="First Name">
-      <span asp-validation-for="FirstName" class="text-danger"></span>
+      <span asp-validation-for="LastName" style="color: blue;"></span>
       <input asp-for="LastName" placeholder="Last Name">
+      <span asp-validation-for="Email" style="color: blue;"></span>
       <input asp-for="Email" placeholder="Email">
+      <span asp-validation-for="Password" style="color: blue;"></span>
       <input asp-for="Password" placeholder="Password">
+      <span asp-validation-for="ConfirmPassword" style="color: blue;"></span>
       <input asp-for="ConfirmPassword" placeholder="Confirm Password">
-      <button type="submit" style="margin-bottom: 10px;">Sign Up</button>
-     
+      <button type="submit" style="margin-bottom: 10px;">Sign Up</button>     
     </div>
     </form>
   </div>
