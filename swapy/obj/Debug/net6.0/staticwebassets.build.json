@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T+baiRJMTfPsfYlh6ytUF3RQuYx0pZPAOuzL/+Q3BIE=",
+  "Hash": "d+u9/Fy9rzJK4EhPsiGGZXJCUkJJ53GkfolvoeugaXU=",
   "Source": "swapy",
   "BasePath": "_content/swapy",
   "Mode": "Default",
@@ -306,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\css\\owl.carousel.css"
     },
     {
+      "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\css\\Profile.css",
+      "SourceId": "swapy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\",
+      "BasePath": "_content/swapy",
+      "RelativePath": "css/Profile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Profile.css"
+    },
+    {
       "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\css\\site.css",
       "SourceId": "swapy",
       "SourceType": "Discovered",
@@ -355,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\bg-img\\21.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\img\\bg-img\\about.jpg",
+      "SourceId": "swapy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\",
+      "BasePath": "_content/swapy",
+      "RelativePath": "img/bg-img/about.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bg-img\\about.jpg"
     },
     {
       "Identity": "C:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\wwwroot\\img\\bg-img\\bg-1.jpg",

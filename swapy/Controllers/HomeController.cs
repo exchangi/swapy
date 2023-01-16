@@ -36,6 +36,18 @@ public class HomeController : Controller
     {
         return View();
     }
+    // -------profile-------------
+      [HttpGet("/profile")]
+    public IActionResult Profile()
+    {
+        return View();
+    }
+// --------about----------
+    [HttpGet("/about")]
+    public IActionResult About()
+    {
+        return View();
+    }
 
     // ------------------USER CONTROLLER------------------
 
