@@ -1,0 +1,51 @@
+@model User
+@section form {
+    <link href="@Url.Content("~/css/AddProduct.css")" rel="stylesheet" type="text/css" />
+<body>
+  <div class="container">
+    <header class="header"> YOUR  PROFILE  </h1>
+      <p id="description" class="description">¡ allways for you !</p>
+    </header>
+    <form asp-action="UpdateUser" asp-controller="Home" asp-route-UserId="@Model.UserId">
+      <div class="form-group">
+        <span asp-validation-for="Image" class="text-danger"></span>
+        <label id="Image-label" asp-for="Image">Image<span class="clue">(opcional)</span></label>
+        <input asp-for="Image" class="form-control" placeholder="Image"  />
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+        <label id="FirstName-label" asp-for="FirstName">FirstName</label>
+        <input asp-for="FirstName" class="form-control" placeholder="FirstName" />
+      </div>
+       <div class="form-group">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+        <label id="LastName-label" asp-for="LastName">LastName</label>
+        <input asp-for="LastName" class="form-control" placeholder="LastName" />
+      </div>
+    <div class="form-group">
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <label id="Email-label" asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Email" />
+      </div>
+        <div class="form-group">
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <label id="Password-label" asp-for="Password">Password</label>
+        <input asp-for="Password" class="form-control" placeholder="Password" />
+      </div>
+        <div class="form-group">
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <label id="ConfirmPassword-label" asp-for="ConfirmPassword">ConfirmPassword</label>
+        <input asp-for="ConfirmPassword" class="form-control" placeholder="ConfirmPassword" />
+      </div>
+        <div class="form-group">
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        <label id="Phone-label" asp-for="Phone">Phone<span class="clue">(opcional)</span></label>
+        <input  asp-for="Phone" class="form-control" placeholder="Phone" />
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Update Now </button>
+      </div>
+    </form>
+  </div>
+</body>
+}

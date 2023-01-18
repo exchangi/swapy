@@ -1,4 +1,8 @@
-  <header class="header_area">
+@model Product
+
+    <link href="@Url.Content("~/css/AddProduct.css")" rel="stylesheet" type="text/css" />
+
+    <header class="header_area">
     <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
         <!-- Classy Menu -->
         <nav class="classy-navbar" id="essenceNav">
@@ -163,52 +167,53 @@
             </div>
         </div>
     </div>
-</div>
+</div> <br> <br>
 <!-- ##### Right Side Cart End ##### -->
-<!-- ##### Welcome Area Start ##### -->
-<section class="welcome_area bg-img background-overlay" style="background-image: url('https://img.freepik.com/free-photo/black-friday-decoration-with-coins-cart_23-2147696837.jpg?w=1380&t=st=1673903441~exp=1673904041~hmac=4289dced5b9699f37e882975b1246565759cd90ed36d81b89c703bd54a9678fd');  ">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="hero-content">
-                    <h2 style=" color: dodgerblue; ">Swapy</h2>
-                    <h1 style="color: white;">Save more  Spend Less  </h1> <br> <br>
-                    <h3 style="color: white;" >swappy allows people to buy and sell physical goods, <br> swap products  services, and digital products over <br> the internet rather than at a brick-and-mortar location.</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ##### New Arrivals Area End ##### -->
-<!-- ##### Brands Area Start ##### -->
-<div class="brands-area d-flex align-items-center justify-content-between">
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand1.png" alt="">
-    </div>
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand2.png" alt="">
-    </div>
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand3.png" alt="">
-    </div>
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand4.png" alt="">
-    </div>
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand5.png" alt="">
-    </div>
-    <!-- Brand Logo -->
-    <div class="single-brands-logo">
-        <img src="/img/core-img/brand6.png" alt="">
-    </div>
-</div>
-<!-- ##### Brands Area End ##### -->
-<!-- ##### Footer Area Start ##### -->
+@section form {
+  <div class="container">
+    <h1 class="header">ADD your Offer </h1>
+    
+    </header>
+    <form asp-action="AddNewProduct" asp-controller="Home" >
+      <div class="form-group">
+        <span asp-validation-for="Image" class="text-danger"></span>
+        <label id="Image-label" asp-for="Image">Image</label>
+        <input asp-for="Image" class="form-control" placeholder="Image"  />
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <label id="Name-label" asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Name" />
+      </div>
+      <div class="form-group">
+        <p>category</p>
+        @* <select name="" id=""> *@
+            @foreach (Category c in ViewBag.ALLcategories)
+            {
+                @* <option value="@c.CategoryId">c.Name</option> *@
+                <label>
+          <input asp-for="CategoryId" value="@c.CategoryId" type="radio" class="input-radio" checked />
+          @c.Name
+          </label>
+            }
+        @* </select> *@
+        @* <label>
+          <input name="clothes" value="definitely" type="radio" class="input-radio" checked />
+          clothes
+          </label> *@
+         
+      </div>
+<div class="form-group">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <p>Description</p>
+        <textarea asp-for="Description" class="input-textarea" name="Description" placeholder="Description"></textarea>
+      </div>
+      <div class="form-group">
+        <a type="button" href="/" class="submit-button">Send Request</a>
+      </div>
+    </form>
+  </div> <br> <br> <br> <br>
+  <!-- ##### Footer Area Start ##### -->
 <footer class="footer_area clearfix">
     <div class="container">
         <div class="row">
@@ -217,7 +222,7 @@
                 <div class="single_widget_area d-flex mb-30">
                     <!-- Logo -->
                     <div class="footer-logo mr-50">
-                        <a href="#">Swapy</a>
+                        <a href="/">Swapy</a>
                     </div>
                     <!-- Footer Menu -->
                     <div class="footer_menu">
@@ -282,3 +287,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </div>
 </footer>
 <!-- ##### Footer Area End ##### -->
+
+}

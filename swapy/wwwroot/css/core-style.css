@@ -738,11 +738,13 @@ img {
 .single-product-wrapper {
   position: relative;
   z-index: 1;
+
   margin-bottom: 50px;
   overflow: hidden;
   background-color: #ffffff; }
   .single-product-wrapper .product-img {
     position: relative;
+    height: 370px;
     z-index: 1;
     overflow: hidden; }
     .single-product-wrapper .product-img img {

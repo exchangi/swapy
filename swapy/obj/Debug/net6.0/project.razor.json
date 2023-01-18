@@ -16313,6 +16313,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\_Card.cshtml",
+      "TargetPath": "Views\\Home\\_Card.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\SwapForm.cshtml",
+      "TargetPath": "Views\\Home\\SwapForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\ShowCat.cshtml",
+      "TargetPath": "Views\\Home\\ShowCat.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -16330,6 +16345,11 @@
     {
       "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DHIA\\Desktop\\swapy\\swapy\\swapy\\Views\\Home\\EditUser.cshtml",
+      "TargetPath": "Views\\Home\\EditUser.cshtml",
       "FileKind": "mvc"
     },
     {

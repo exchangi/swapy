@@ -1,5 +1,7 @@
 body{
-    background: -webkit-linear-gradient(left, #3931af, #f7f9fa);
+    background-image: url("https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg?w=1380&t=st=1673901152~exp=1673901752~hmac=c3fce9a0497157bd62ae95ce1388ab0302e2060665a47000edef5cd598e347ea");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .emp-profile{
     padding: 3%;
@@ -14,7 +16,7 @@ body{
 .profile-img img{
     width: 70%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 .profile-img .file {
     position: relative;
